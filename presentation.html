@@ -1,0 +1,293 @@
+<HTML>
+<HEAD>
+
+
+<TITLE>DeLiang Wang's Talks</TITLE>
+<META NAME="DeLiang Wang" CONTENT="presentation">
+
+
+<STYLE>
+
+BODY {background:#A5DE94}
+
+A:LINK {color:#218429}
+A:VISITED {color:#218429}
+
+
+H1 {color:#FF6342;font-weight:bold;font-size:16pt; text-align:center}
+H3 {color:#FF6342;font-weight:bold; font-style:italic; font-size:14pt;
+    text-align:center}
+H2 {color:#FF6342;font-weight:bold; font-style:italic; font-size:16pt;
+    text-align:center}
+
+FONT {color:#218429; font-weight:bold; font-size:11pt}
+
+UL {list-style:disc; font-size:11pt; color:#218429}
+
+</STYLE>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- to create the animation
+var whichImg = 1
+var nextImage
+
+function swap(id, newSrc) {
+	var theImage = findImage(document, id, 0);
+	if (theImage) {
+		theImage.src = newSrc;
+	}
+}
+
+function animate(newImage) {
+	swap('animated_brain', newImage);
+
+	if (whichImg == 1) {
+		nextImage = "my_images/brain2.gif"
+		whichImg = 0
+	}
+	else {
+		nextImage = "my_images/brain.gif"
+		whichImg = 1
+	}
+
+	setTimeout("animate(nextImage)", 1000)
+}
+
+function findImage(doc, name, j) {
+
+    // Declare a variable to hold the image
+    // (if/when we find it)
+    var theImage = false;
+
+    // The document object's images property contains a 
+    // collection of all the images in a document.
+
+    if (doc.images) {
+        theImage = doc.images[name];
+    }
+
+    // Return the image if we've already found it
+    if (theImage) {
+        return theImage;
+    }
+
+    // Otherwise, return an error
+    return (false);
+}
+
+function preloadImages() {
+    if (document.images) {
+       var imgFiles = preloadImages.arguments;
+       var preloadArray = new Array();
+
+        for (var i=0; i<imgFiles.length; i++) {
+            preloadArray[i] = new Image;
+            preloadArray[i].src = imgFiles[i];
+        }
+    }
+}
+// -->
+</SCRIPT>
+
+</HEAD>
+
+
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 onLoad="animate('my_images/brain2.gif')">
+
+<SCRIPT LANGUAGE='JavaScript'>
+<!--
+preloadImages('my_images/brain.gif', 'my_images/brain2.gif')
+//-->
+</SCRIPT>
+
+
+<table width="100%" border=0 cellspacing=0 cellpadding=5>
+  <tr> 
+    <td WIDTH=128 ALIGN="center">
+	<IMG NAME="animated_brain" SRC="my_images/brain.gif" BORDER=0>
+    </td>
+
+    <td VALIGN="top" BGCOLOR="FFFFFF" ROWSPAN=2>
+
+	<H1>Selected Talks</H1>
+
+<UL>
+
+<LI><a href="talks/CMU22.pptx">
+Neural spectrospatial filter</a> (in pptx).
+<CITE>CMU Language Technologies Institute Colloquium</CITE>, 
+Pittsburg PA, April 2022.
+<br><br>
+
+<LI><a href="talks/ASRU19.pptx">
+A deep CASA approach to talker-independent speaker separation</a> (in pptx). Keynote lecture at
+<CITE>ASRU-19</CITE>, 
+Singapore, December 2019.
+<br><br>
+
+<LI><a href="talks/ETON-Primer19.pptx">
+The cocktail party problem: A case study in deep learning</a> (in pptx). Expert-to-nonexpert primer at
+<CITE>ICASSP-19</CITE>, 
+Brighton UK, May 2019.
+<br><br>
+
+<LI><a href="talks/Interspeech_tut18.pptx">
+Deep learning based speech separation</a> (in pptx). Three-hour Tutorial at
+<CITE>INTERSPEECH-18</CITE>, 
+Hyderabad India, September 2018.
+<br><br>
+
+<LI><a href="talks/IWAENC16.pptx">
+Supervised speech separation</a> (in pptx). One-hour Tutorial at
+<CITE>IWAENC-16</CITE>, 
+Xi'an China, September 2016.
+<br><br>
+
+<LI><a href="talks/ICASSP16.pptx">
+Supervised speech separation</a> (in pptx). Three-hour Tutorial at
+<CITE>ICASSP-16</CITE>, 
+Shanghai China, March 2016.
+<br><br>
+
+<LI><a href="talks/LVA15.ppt">
+Deep neural networks for supervised speech separation</a>
+(in ppt). Keynote lecture at the
+<CITE>International Conference on Latent Variable Analysis and Signal Separation (LVA/ICA)</CITE>, Liberec, Czech Republic, August 2015.
+<br><br>
+
+<LI><a href="talks/CIAP15.ppt">
+From auditory masking to supervised separation: A tale of improving intelligibility of noisy speech for hearing-impaired listeners</a>
+(in ppt). Invited talk at the
+<CITE>Conference on Implantable Auditory Prostheses (CIAP)</CITE>, Lake Tahoe CA, July 2015.
+<br><br>
+
+<LI><a href="talks/WASPAA13.ppt">
+From auditory masking to binary classification: Machine learning for speech separation</a>
+(in ppt). Plenary lecture at
+<CITE>IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</CITE>, New Paltz NY, Oct. 2013.
+<br><br>
+
+<LI><a href="talks/ICASSP10.ppt">
+Speech segregation</a> (in ppt). Tutorial at
+<CITE>ICASSP-10</CITE>, 
+Dallas TX, March 2010.
+<br><br>
+
+<LI><a href="talks/SSP09.ppt">
+A hidden Markov model framework for multi-target tracking</a>
+(in ppt). Plenary lecture at
+<CITE>IEEE Workshop on Statistical Signal Processing</CITE>, Cardiff, U.K., Sept. 2009.
+<br><br>
+
+<LI><a href="talks/IHCON08.ppt">
+Computational auditory scene analysis and its potential application to hearing aids</a>
+(in ppt). Invited talk at the
+<CITE>International Hearing Aid Research Conference</CITE>, Lake Tahoe CA, Aug. 2008.
+<br><br>
+
+<LI><a href="talks/WCCI08.ppt">
+Cocktail party processing</a>
+(in ppt). Invited talk at the
+<CITE>World Congress on Computational Intelligence</CITE>, Hong Kong, June 2008.
+<br><br>
+
+<LI><a href="talks/ICCN07.ppt">
+The time dimension for scene analysis</a>
+(in ppt). Plenary talk at the
+<CITE>International Conference on Cognitive Neurodynamics</CITE>, Shanghai, China, Nov. 2007.
+<br><br>
+
+<LI><a href="talks/IntelSound07.ppt">
+Robust automatic speech recognition by transforming binary uncertainties</a>
+(in ppt).
+<CITE>Intelligent Sound Workshop</CITE>, 
+Karlslunde, Denmark, May 2007.
+<br><br>
+
+<LI><a href="talks/CAHR07.ppt">
+Speech perception in noise and ideal time-frequency masking</a> (in ppt).
+<CITE>Technical University of Denmark Center for Applied Hearing Research</CITE>, 
+Lyngby, Denmark, April 2007.
+<br><br>
+
+<LI><a href="http://labrosa.ee.columbia.edu/Montreal2004/talks/deliang2.pdf">
+Effects of reverberation on pitch, onset/offset, and binaural cues</a> 
+(in pdf).
+<CITE>AFOSR/NSF Workshop on Speech Separation and Comprehension in Complex 
+Acoustic Environments</CITE>, 
+Montreal, Canada, Nov. 2004.
+<br><br>
+
+<LI><a href="talks/Hanse04.ppt">
+Auditory segmentation and unvoiced speech segregation</a> (in ppt).
+<CITE>Hanse Workshop on Auditory Scene Analysis and Speech 
+Perception by Human and Machine</CITE>, 
+Delmenhorst, Germany, Aug. 2004.
+<br><br>
+
+<LI><a href="talks/Montreal03.pdf">
+On computational objectives of auditory scene analysis</a> (in pdf).
+<CITE>NSF Workshop on Perceptives on Speech Separation</CITE>, 
+Montreal, Canada, Nov. 2003.
+<br><br>
+
+<LI><a href="talks/Utrecht03.ppt">
+Speech segregation based on sound localization</a> (in ppt).
+<CITE>International Workshop on Spatial and Binaural Hearing</CITE>, 
+Utrecht, The Netherlands, June 2003.
+<br><br>
+
+
+</UL>
+
+     </td>
+  </tr>
+
+
+  <tr>
+    <td WIDTH=128 ALIGN="center" VALIGN="top">
+
+	<FONT>
+	<A TARGET=_blank HREF="https://web.cse.ohio-state.edu/pnl">Laboratory<br>(Research)</A>
+
+	<BR><BR>
+	<A HREF="teaching.html">Teaching<br>(Office hours)</A>
+
+	<BR><BR>
+	<A HREF="research.html">Research Interests</A>
+		
+	<BR><BR>
+	<A HREF="biography.html">Biography</A>
+
+	<BR><BR>
+	Publications<BR>
+                        <A TARGET=_blank HREF="pubs_year.html"><I>By Year</I><BR></A>
+                        <A TARGET=_blank HREF="pubs_topic.html"><I>By Topic</I></A>
+
+	<BR><BR>
+	<A HREF="presentation.html">Presentations</A>
+
+<!--
+	<BR><BR>
+	<A HREF="professional.html">Professional Info</A>
+
+	<BR><BR>
+	<A HREF="personal.html">Personal Info</A>
+-->
+
+	<BR><BR>
+	<A HREF="links.html">Useful Links</A>
+
+
+	<BR><BR>
+	<A HREF="index.html">Home</A>
+	</FONT>
+
+    </td>
+  </tr>
+
+</table>
+
+</BODY>
+</HTML>

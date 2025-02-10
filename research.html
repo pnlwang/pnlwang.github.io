@@ -1,0 +1,203 @@
+<HTML>
+<HEAD>
+
+
+<TITLE>DeLiang Wang's Research Interests</TITLE>
+<META NAME="DeLiang Wang" CONTENT="research, wang, interest">
+
+
+<STYLE>
+
+BODY {background:#A5DE94}
+
+A:LINK {color:#218429}
+A:VISITED {color:#218429}
+
+FONT {color:#218429; font-weight:bold}
+
+H1 {color:#FF6342;font-weight:bold;font-size:16pt; text-align:center}
+H3 {color:#FF6342;font-weight:bold; font-style:italic; font-size:14pt;
+    text-align:center}
+H2 {color:#FF6342;font-weight:bold; font-style:italic; font-size:14pt;
+   text-align:center}
+
+P {color:#218429; font-size:11pt}
+
+UL {list-style:disc; font-size:11pt; color:#218429}
+
+</STYLE>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- to create the animation
+var whichImg = 1
+var nextImage
+
+function swap(id, newSrc) {
+	var theImage = findImage(document, id, 0);
+	if (theImage) {
+		theImage.src = newSrc;
+	}
+}
+
+function animate(newImage) {
+	swap('animated_brain', newImage);
+
+	if (whichImg == 1) {
+		nextImage = "my_images/brain2.gif"
+		whichImg = 0
+	}
+	else {
+		nextImage = "my_images/brain.gif"
+		whichImg = 1
+	}
+
+	setTimeout("animate(nextImage)", 1000)
+}
+
+function findImage(doc, name, j) {
+
+    // Declare a variable to hold the image
+    // (if/when we find it)
+    var theImage = false;
+
+    // The document object's images property contains a 
+    // collection of all the images in a document.
+
+    if (doc.images) {
+        theImage = doc.images[name];
+    }
+
+    // Return the image if we've already found it
+    if (theImage) {
+        return theImage;
+    }
+
+    // Otherwise, return an error
+    return (false);
+}
+
+function preloadImages() {
+    if (document.images) {
+       var imgFiles = preloadImages.arguments;
+       var preloadArray = new Array();
+
+        for (var i=0; i<imgFiles.length; i++) {
+            preloadArray[i] = new Image;
+            preloadArray[i].src = imgFiles[i];
+        }
+    }
+}
+// -->
+</SCRIPT>
+
+</HEAD>
+
+
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 onLoad="animate('my_images/brain2.gif')">
+
+<SCRIPT LANGUAGE='JavaScript'>
+<!--
+preloadImages('my_images/brain.gif', 'my_images/brain2.gif')
+//-->
+</SCRIPT>
+
+
+<table width="100%" border=0 cellspacing=0 cellpadding=5>
+  <tr> 
+    <td WIDTH=128 ALIGN="center">
+	<IMG NAME="animated_brain" SRC="my_images/brain.gif" BORDER=0>
+    </td>
+
+    <td VALIGN="top" BGCOLOR="FFFFFF" ROWSPAN=2>
+
+	<BR>
+	<H1> Research Interests </H1> 
+<P>
+DeLiang Wang's general area of interest is machine perception. More 
+specifically, he is interested in neural computation 
+for auditory and visual information processing. To achieve this, his 
+research program seeks to uncover computational principles for 
+auditory and visual analysis, including segmentation, 
+recognition and generation. This research is on the basis of 
+psychological/neurobiological data from human and animal perception and 
+computational considerations. 
+<BR>
+<P>
+A fundamental aspect of perception is its ability to group elements 
+of a perceived scene or sensory field into coherent clusters (objects), 
+generally known as scene analysis and segmentation.  The general 
+problem of scene analysis remains unsolved in computational audition
+and vision. For a number of years, Wang's group focuses on 
+understanding the dynamics of large networks of
+coupled neural oscillators and their applications to scene analysis
+(see <A HREF="papers/Wang.tnn05.pdf">Wang, 2005</a>, for a view/review on 
+this research effort).  The results of this study have yielded 
+a neurobiologically plausible approach to address the problem of 
+scene analysis.
+<br>
+<p>
+His recent work focuses on developing learning algorithms, in particular deep neural networks, for 
+auditory scene analysis. In order to achieve the ultimate goal of 
+constructing a computational system that possesses the human ability of
+cocktail-party processing, one must
+understand individual analyses, such as pitch, location, amplitude
+and frequency modulation, onset/offset, rhythm, and so on. One must
+also incorporate top-down mechanisms, such as recognition and attention. 
+His Perception and Neurodynamics Lab (PNL) investigates a variety of topics under 
+the general theme of computational audition where deep learning plays a major role.   
+<br>
+<p>
+See the	<A TARGET=_blank HREF="http://www.cse.ohio-state.edu/pnl">PNL website</A> for the current activity in the laboratory.
+
+	
+    </td>
+  </tr>
+
+
+  <tr>
+    <td WIDTH=128 ALIGN="center" VALIGN="top">
+
+	<FONT>
+	<A TARGET=_blank HREF="http://www.cse.ohio-state.edu/pnl">Laboratory<br>(Research)</A>
+
+	<BR><BR>
+	<A HREF="teaching.html">Teaching<br>(Office hours)</A>
+
+	<BR><BR>
+	<A HREF="research.html">Research Interests</A>
+		
+	<BR><BR>
+	<A HREF="biography.html">Biography</A>
+
+	<BR><BR>
+	Publications<BR>
+                        <A TARGET=_blank HREF="pubs_year.html"><I>By Year</I><BR></A>
+                        <A TARGET=_blank HREF="pubs_topic.html"><I>By Topic</I></A>
+
+	<BR><BR>
+	<A HREF="presentation.html">Presentations</A>
+
+<!--
+	<BR><BR>
+	<A HREF="professional.html">Professional Info</A>
+
+	<BR><BR>
+	<A HREF="personal.html">Personal Info</A>
+-->
+
+	<BR><BR>
+	<A HREF="links.html">Useful Links</A>
+
+
+	<BR><BR>
+	<A HREF="index.html">Home</A>
+	</FONT>
+
+    </td>
+  </tr>
+
+</table>
+
+</BODY>
+</HTML>
