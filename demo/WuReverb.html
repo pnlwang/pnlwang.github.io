@@ -1,0 +1,709 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.cse.ohio-state.edu/~dwang/demo/WuReverb.html -->
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="WuReverb_files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Guoning Hu</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Fair Isaac Corporation</o:LastAuthor>
+  <o:Revision>103</o:Revision>
+  <o:TotalTime>333</o:TotalTime>
+  <o:Created>2002-03-25T21:17:00Z</o:Created>
+  <o:LastSaved>2004-07-09T05:12:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1140</o:Words>
+  <o:Characters>6504</o:Characters>
+  <o:Company>Ohio State University</o:Company>
+  <o:Lines>54</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>7629</o:CharactersWithSpaces>
+  <o:Version>10.4219</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:.5in;
+	text-align:justify;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.section1, li.section1, div.section1
+	{mso-style-name:section1;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 96.0pt 1.0in 45.0pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074">
+  <o:colormenu v:ext="edit" fillcolor="none"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=EN-US link=blue vlink=blue style='tab-interval:.5in'>
+<!--[if gte mso 9]><xml>
+ <v:background id="_x0000_s1025" o:bwmode="white" o:targetscreensize="800,600">
+  <v:fill type="frame"/>
+ </v:background></xml><![endif]-->
+
+<div class=Section1>
+
+<p class=section1 align=center style='text-align:center'><strong
+style='background-attachment:scroll'><span style='font-size:24.0pt;mso-bidi-font-size:
+13.5pt;font-family:Helvetica'>Sound Demo for the Wu-Wang Reverberant Speech
+Enhancement System<o:p></o:p></span></strong></p>
+
+<p class=section1 align=center style='text-align:center'><span
+style='font-size:8.0pt;mso-bidi-font-size:12.0pt;font-family:Helvetica'>&nbsp;</span><span
+style='font-size:8.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=section1 style='text-align:justify;line-height:150%'>The reverberant
+speech enhancement results for 8 sentences from 4 female and 4 male speakers using
+the Wu-Wang system described in the paper &#8220;A two-stage algorithm for one-microphone
+reverberant speech enhancement&#8221; by M. Wu and D.L. Wang 
+(under consideration by IEEE
+Trans. Speech & Audio Processing) are given in the following wave files. </p>
+
+<p class=section1 style='text-align:justify;line-height:150%'>The 1<sup>st</sup>
+and the 2<sup>nd</sup> columns (&#8220;Clean&#8221;) are clean speech utterances
+sampled at 16 kHz and 8 kHz, respectively. The 3<sup>rd</sup> and 4<sup>th</sup>
+columns (&#8220;REV&#8221;) are reverberant speech signals produced by
+convolving the clean signals and a room impulse response function with T60 =
+0.3 s, sampled at 16 kHz and 8 kHz, respectively. The 5<sup>th</sup> column
+(&#8220;YM&#8221;) is the processed speech using the YM algorithm by B. <span class=SpellE>Yegnanarayana</span>
+and P.S. Murthy (described in &#8220;Enhancement
+of reverberant speech using LP residual signal,&#8221; IEEE Trans. Speech
+& Audio Processing, vol. 8, pp. 267-281, 2000) sampled at 8 kHz. Column 6 and 7 (&#8220;INV&#8221;) are inverse-filtered
+speech resulting from the first stage of the proposed algorithm sampled at
+16 kHz and 8 kHz, respectively. Column 8 and 9 (&#8220;DEREV&#8221;) are the
+final processed speech using the proposed two-stage algorithm sampled at 16 kHz and 8 kHz,
+respectively.</p>
+
+<p class=section1 style='text-align:justify;line-height:150%'><o:p>&nbsp;</o:p></p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;
+  font-family:Helvetica'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Clean (16k)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Clean (8k)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>REV (16k)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>REV (8k)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>YM (8k)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>INV (16k)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>INV (8K)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>DEREV (16K)<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>DEREV (8K)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Female1<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female1_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Female2<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female2_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Female3<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female3_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Female4<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/female4_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Male1<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male1_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Male2<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male2_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Male3<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male3_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'>Male4<o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_clean_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_clean_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.15pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_rev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_rev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_ym_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_inv_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_inv_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_derev_16k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+  <td width=64 valign=top style='width:48.2pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=section1 style='text-align:justify;line-height:150%'><span
+  style='font-family:Helvetica'><a
+  href="http://www.cse.ohio-state.edu/~mwu/Public/demo/male4_derev_8k.wav">wav</a><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=section1 style='margin-left:.5in;text-align:justify;line-height:150%'><span
+style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;font-family:
+Helvetica'><o:p>&nbsp;</o:p></span></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'>&nbsp;</p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=section1 style='margin-left:.5in;text-align:justify;line-height:150%'><strong><span
+style='font-size:14.0pt;mso-bidi-font-size:12.0pt;line-height:150%;font-family:
+Helvetica;color:white;font-weight:normal'>&nbsp;<o:p></o:p></span></strong></p>
+
+</div>
+
+</body>
+
+</html>
