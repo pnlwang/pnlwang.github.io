@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>speech perception of gated noise</title>
+</head>
+
+<body>
+<h1 align="center"><strong>Sound demo for IBM-masked noise</strong></h1>
+<p><br />
+This page demonstrates a new phenomenon that noise turned on and off properly in a time-frequency 
+representation can produce intelligible speech. More specifically, pure noise masked (or gated) by the ideal binary mask (IBM) yields intelligible speech. Thanks for Arun Narayanan who created this page in Oct. 2012.
+See the following papers for describing the basic phenomenon:</p>
+
+<p>Wang D.L., Kjems U., Pedersen M.S., Boldt J.B., and Lunner  T. (2008): <a href="http://www.cse.ohio-state.edu/~dwang/papers/WKPBL.jasa08.pdf">Speech  perception of noise with binary gains</a>. <cite>Journal of the Acoustical Society of  America</cite>, vol. 124, pp. 2303-2307.</p>
+<p>Kjems U.,  Boldt J.B., Pedersen M.S., Lunner T., and Wang D.L. (2009): <a href="http://www.cse.ohio-state.edu/~dwang/papers/KBPLW.jasa09.pdf">Role of  mask pattern in intelligibility of ideal binary-masked noisy speech</a>.  <cite>Journal of the Acoustical Society of America</cite>, vol. 126, pp. 1415-1426.<br />
+<p>&nbsp;</p>
+
+<hr />
+<p align="center">This demo uses speech shaped noise and the IBM patterns shown below. Can you understand the resulting signal?</p>
+<div align="center">
+  <table width="720" height="332" border="0">
+    <tr>
+      <td width="580"><p><img src="IBM/digits/ssn_spectrogram.jpg" width="546" height="287" align="baseline" /></p>
+      <p align="center">Spectrogram of speech shaped noise</p></td>
+      <td width="120"><div align="center"><a href="IBM/digits/ssn.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></div></td>
+    </tr>
+  </table>
+  
+</div>
+<div align="center">
+  <table width="774" height="126" border="0">
+    <tr>
+      <td width="736"><div align="center">
+        <p><img src="IBM/digits/1a_nw.png" width="64" height="64" />  <img src="IBM/digits/2a_mb.png" width="64" height="64" /> <img src="IBM/digits/3a_mb.png" width="64" height="64" /> <img src="IBM/digits/4a_ff.png" width="64" height="64" /> <img src="IBM/digits/5a_fl.png" width="64" height="64" /> <img src="IBM/digits/6a_gr.png" width="64" height="64" alt=" " /> <img src="IBM/digits/7a_ne.png" width="64" height="64" /> <img src="IBM/digits/8a_rf.png" width="64" height="64" /> <img src="IBM/digits/9b_mb.png" width="64" height="64" /> <img src="IBM/digits/ob_nw.png" width="64" height="64" /> <img src="IBM/digits/zb_st.png" width="64" height="64" /></p>
+        <p>IBM patterns</p>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table width="526" border="0">
+    <tr>
+      <td width="516"><div align="center">
+        <p><a href="IBM/digits/1-z_r.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+        <p>Signal synthesized by gating the speech shaped noise using the above binary mask patterns</p>
+      </div></td>
+    </tr>
+  </table>
+</div>
+<hr />
+<p align="center">The second demo is based on a digit utterance from the TIDigits corpus.</p>
+<div align="center">
+  <table width="777" height="115" border="1">
+    <tr>
+      <td width="583"><p align="center"><img src="IBM/digits/clean_spectrogram.jpg" width="545" height="287" /></p>
+      <p align="center">Spectrogram of clean speech</p></td>
+      <td width="178"><div align="center">
+        <p><a href="IBM/digits/clean.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+      </div></td>
+    </tr>
+    <tr>
+      <td><p align="center"><img src="IBM/digits/ssn_spectrogram.jpg" width="545" height="287" /></p>
+        <p align="center">Spectrogram of speech shaped noise</p>
+        <p align="center"><img src="IBM/digits/ibm_ssn.jpg" width="545" height="287" /></p>
+      <p align="center">The IBM pattern</p></td>
+      <td width="178"><div align="center">
+        <p><a href="IBM/digits/ssn.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+        <p>Speech shaped noise</p>
+        </div>
+        <div align="center">
+          <p><a href="IBM/digits/Noise_ssn_ibm_ssn.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+          <p>Signal synthesized from the speech shaped noise masked by the IBM</p>
+      </div></p></td>
+    </tr>
+    <tr>
+      <td><p align="center"><img src="IBM/digits/factory_spectrogram.jpg" width="545" height="287" /></p>
+        <p align="center">Spectrogram of factory noise</p>
+        <p align="center"><img src="IBM/digits/ibm_factory.jpg" width="545" height="287" /></p>
+      <p align="center">The IBM pattern</p></td>
+      <td width="178"><div align="center">
+        <p><a href="IBM/digits/factory.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+        <p>Factory noise</p>
+        </div>
+        <div align="center">
+          <p><a href="IBM/digits/Noise_factory_ibm_factory.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+          <p>Signal synthesized from the factory noise masked by the IBM
+        </p></div><div align="center">
+          <p><a href="IBM/digits/Noise_factory_ibm_ssn.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+          <p>Signal synthesized from factory noise masked by the IBM for the speech shaped noise</p>
+      </div></p></td>
+    </tr>
+  </table>
+</div>
+<hr />
+<p align="center">The next demo is based on an utterance from the Wall Street Journal (WSJ0) corpus:</p>
+<div align="center">
+  <table width="777" height="115" border="1">
+    <tr>
+      <td width="583"><p align="center"><img src="IBM/wsj0/signal.jpg" width="545" height="287" /></p>
+      <p align="center">Spectrogram of clean speech</p></td>
+      <td width="178"><div align="center">
+        <p><a href="IBM/wsj0/signal.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+      </div></td>
+    </tr>
+    <tr>
+      <td><p align="center"><img src="IBM/wsj0/ssn.jpg" width="545" height="287" /></p>
+        <p align="center">Spectrogram of speech shaped noise</p>
+        <p align="center"><img src="IBM/wsj0/ibm_ssn.jpg" width="545" height="287" /></p>
+      <p align="center">The IBM pattern</p></td>
+      <td width="178"><div align="center">
+        <p><a href="IBM/wsj0/ssn.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+        <p>Speech shaped noise</p>
+        </div>
+        <div align="center">
+          <p><a href="IBM/wsj0/ssn_ibm.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+          <p>Signal synthesized from the speech shaped noise using the IBM</p>
+        </div>
+        </p></td>
+    </tr>
+    <tr>
+      <td><p align="center"><img src="IBM/wsj0/babble.jpg" width="545" height="287" /></p>
+        <p align="center">Spectrogram of babble noise</p>
+        <p align="center"><img src="IBM/wsj0/ibm_babble.jpg" width="545" height="287" /></p>
+      <p align="center">The IBM pattern</p></td>
+      <td width="178"><div align="center">
+        <p><a href="IBM/wsj0/babble.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+        <p>Babble noise (32 talker)
+          </p></div>
+        <div align="center">
+          <p><a href="IBM/wsj0/babble_ibm.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+          <p>Signal synthesized from the babble noise using the IBM </p>
+        </div>
+        <div align="center">
+          <p><a href="IBM/wsj0/babble_tbm.wav"><img src="IBM/soundwave.jpg" width="32" height="32" align="middle" /></a></p>
+          <p>Signal synthesized from the babble noise masked the IBM for the speech shaped noise</p>
+        </div>
+        </p></td>
+    </tr>
+  </table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
