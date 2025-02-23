@@ -1,0 +1,35 @@
+This C program is used for producing the results presented in the following 
+article:
+
+Linsay P.S. and Wang D.L. (1998): "Fast numerical integration of relaxation   
+oscillator networks based on singular limit solutions," IEEE Transactions 
+on Neural Networks, vol. 9, 523-532. 
+
+
+We distribute these programs freely, but please cite the paper
+if you have made any use of these programs.
+
+
+"singular.c": this program integrates a system of relaxation oscillators
+	in the singular limit. The algorithm is described in detail
+	in the above paper.
+
+"singular.h": the header file for "singular.c".
+
+Stim: The 50x50 stimulus pattern used to test the system.
+
+
+By DeLiang Wang
+
+-- 
+------------------------------------------------------------
+Dr. DeLiang Wang
+Department of Computer and Information Science
+The Ohio State University
+2015 Neil Ave.
+Columbus, OH 43210-1277, U.S.A.
+
+Email: dwang@cis.ohio-state.edu
+Phone: 614-292-6827 (OFFICE); 614-292-7402 (LAB)
+Fax: 614-292-2911
+URL: http://www.cis.ohio-state.edu/~dwang

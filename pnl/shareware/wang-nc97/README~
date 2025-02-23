@@ -1,0 +1,38 @@
+This C program is used for producing the results presented in the following 
+article:
+
+Wang D.L. and Terman D. (1997): "Image segmentation based on oscillatory 
+correlation,". Neural Computation, vol. 9, 805-836 (For errata see 
+Neural Computation, vol. 9, 1623-1626, 1997). Also, for an earlier but 
+extended version with detailed analysis see "Image segmentation based on 
+oscillatory correlation," Technical Report 19, Center for Cognitive Science, 
+The Ohio State University, Columbus, Ohio, USA. 
+
+We distribute these programs freely, but please cite the paper
+if you have made any use of these programs.
+
+
+"segment.c": this program performs image segmentation based on an algorithm
+	extracted from LEGION dynamics. The algorithm is described in detail
+	in the above paper.
+
+"segment.h": the header file for "segment.c".
+
+images: The three gray-level images used in the paper are given under
+	directory /images.
+
+
+By DeLiang Wang
+
+-- 
+------------------------------------------------------------
+Dr. DeLiang Wang
+Department of Computer and Information Science
+The Ohio State University
+2015 Neil Ave.
+Columbus, OH 43210-1277, U.S.A.
+
+Email: dwang@cis.ohio-state.edu
+Phone: 614-292-6827 (OFFICE); 614-292-7402 (LAB)
+Fax: 614-292-2911
+URL: http://www.cis.ohio-state.edu/~dwang

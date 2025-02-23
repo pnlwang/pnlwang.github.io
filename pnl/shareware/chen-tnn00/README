@@ -1,0 +1,52 @@
+This set of C programs is used for producing the results presented in the 
+following article:
+
+Chen K., Wang D.L., and Liu X.: "Weight adaptation and oscillatory 
+correlation for image segmentation," IEEE Transactions on Neural Networks, 
+vol. 11, pp. 1106-1123, 2000. 
+
+We distribute these programs freely, but please cite the paper
+if you have made any use of these programs.
+
+
+fps.c: this program smoothes an image using the feature-preserving smoothing
+	algorithm described in the paper. For simplicity, we give the
+	version that operates directly on pixels rather than the one
+	that operates on connection weights. As noted in the paper,
+	the two versions are equivalent in terms of smoothing performance.
+	
+	The program takes as input a pgm image, and outputs the result
+	also as a pgm file. There are a few adjustable parameters. In
+	general, however, minimal parameter tuning is required to 
+	produce reasonable results for the same type of imagery.
+
+x.fps: executable file that compiles "fps.c"
+
+
+cwl.c: this program segments an image using an improved LEGION algorithm
+	(compared to the original one given by Wang and Terman in their
+	1997 Neural Computation article), as described in the paper.
+
+	The program takes as input a pgm image, and outputs the result
+	also as a pgm file, where different segments are coded by
+	different gray levels. There are a few adjustable parameters. 
+	The key one is the level of global inhibition, Wz.
+
+x.cwl: executable file that compiles "cwl.c"
+
+
+By DeLiang Wang
+
+-- 
+------------------------------------------------------------
+Dr. DeLiang Wang
+Department of Computer Science & Engineering
+The Ohio State University
+2015 Neil Ave.
+Columbus, OH 43210-1277, U.S.A.
+
+Email: dwang@cse.ohio-state.edu
+Phone: 614-292-6827 (OFFICE); 614-292-7402 (LAB)
+Fax: 614-292-2911
+URL: http://www.cse.ohio-state.edu/~dwang
+

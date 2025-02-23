@@ -1,0 +1,155 @@
+This set of C programs is used for producing the results presented in the 
+following article:
+
+D.L. Wang and G.J. Brown: "Separation of speech from interfering
+sounds based on oscillatory correlation," IEEE Trans. on Neural Networks, 
+vol. 10, pp. 684-697, 1999.
+
+We distribute these programs freely, but please cite the paper
+if you have made any use of these programs.
+
+"v8n6": The mixture signal used in the paper as as illustrative example: 
+	voice + phone.
+
+There are two subdirectories: "algorithmic" and "dynamic". 
+
+Under "algorithmic"
+
+correlogram.c: this program computes correlograms as well as auditory
+	peripheral functions such as gammatone filtering and hair cell
+	response. 
+	
+	Within the file, a number of constants need to be specified:
+
+	lowerCF: the lower center (characteristic) frequency
+	upperCF: the upper center frequency
+	numChannels: the number of total filter channels
+		and a few other specifications as given in the program
+
+	These specifications can be either given in the program directly
+	(in the "main" procedure), or as command-line parameters. In the 
+	latter case, the command should read like:
+
+			correlogram -l 25 -u 6000 < signal
+
+	The above command specifies that the lowerCF is 25 Hz while the
+	upperCF is 6000 Hz. If these specifications are given in the program,
+	the command to run the program should read like:
+
+			correlogram < signal
+
+	"signal" is an integer file that contains the waveform input signal.
+	Besides these specifications, a few other filter constants need
+	to be given at the beginning of the program, such as the sampling
+	rate, the maximum delay and the time window for computing
+	a correlogram.
+
+	The output of the program is a collection of correlograms, named
+	"ACG.xxx".
+
+
+x.correlogram: executable file that compiles "correlogram.c"
+
+
+segregate.c: this program takes as input correlograms, and produces
+	segmentation and grouping results. Because segmentation and 
+	grouping in this program are based on an older algorithm, such
+	parts have been commented. Instead, the only two useful outputs
+	are (see the beginning of the program):
+
+	PITCHMASK: to be used later for segmentation and grouping.
+
+	ENERGY: an intermediate map representation of the Meddis hair cell
+	response.
+
+	The number of frames needs specified at the beginning portion of
+	the program by the constant: MAX_FRAME.
+
+	To run the program, simply type:
+
+		segregate
+
+
+x.segregate: executable file that compiles "segregate.c"
+
+
+trim.c: this program does segmentation and performs conformation and 
+	trimming by the longest segment (see the beginning of the program).
+	The number of time frames is supplied as a command-line parameter
+	as in the following:
+
+		trim -n NUM_FRAMES < PITCHMASK
+
+	The last part of the above command supplies the input to the program.
+
+
+x.trim: executable file that compiles "trim.c"
+
+
+stream.c: this program takes the results of segmentation and trimming by
+	"trim.c" and performs grouping (see the beginning of the program).
+	The number of time frames is supplied as a command-line parameter
+	as in the following:
+
+		stream -n NUM_FRAMES
+
+	To facilitate read-write, this program should be executed right
+	after "trim" in the following manner:
+
+		trim -n NUM_FRAMES < PITCHMASK | stream -n NUM_FRAMES
+
+	The overall result of the above piped commands is two streams 
+	written to the following two files:
+
+		STREAM1 and STREAM2
+
+x.stream: executable file that compiles "stream.c"
+
+
+resynthesize.c: this program performs resynthesis based on segregated streams.
+	The input consists of: (1) The file containing the stream, 
+	(file_mask: a mask of the size [numframes, numchannels-1]); 
+	(2) The file for the original mixture (file_mixture). 
+	The output corresponds to the segregated signal (file_signal):
+
+		resynthesize -f file_mask < file_mixture > file_signal 
+
+x.resynthesize: executable file that compiles "resynthesize.c" 
+
+
+Note that the above programs for segmentation and grouping are algorithmic
+versions of the dynamics described in the Wang-Brown paper. These algorithms
+are equivalent to the dynamical version. The programs that implement
+the dynamical version (different equations) run slowly, and are available
+below.
+
+
+
+Under "Dynamic"
+
+segment.c: This program implements the segmentation layer of the two-layer
+	oscillator network. 
+
+segment.h: header file for "segment.c"
+
+group.c: This program implements the grouping layer of the two-layer
+	oscillator network. 
+
+group.h: header file for "group.c"
+
+
+By DeLiang Wang
+
+-- 
+------------------------------------------------------------
+Dr. DeLiang Wang
+Department of Computer Science & Engineering
+The Ohio State University
+2015 Neil Ave.
+Columbus, OH 43210-1277, U.S.A.
+
+Email: dwang@cse.ohio-state.edu
+Phone: 614-292-6827 (OFFICE); 614-292-7402 (LAB)
+Fax: 614-292-2911
+URL: http://www.cse.ohio-state.edu/~dwang
+
