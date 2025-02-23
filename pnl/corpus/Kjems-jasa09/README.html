@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>
+Intelligibility data
+</TITLE>
+</HEAD>
+
+<BODY>
+
+<center>
+<H2>
+<BR>
+Speech Intelligibility Data from Kjems <I>et al</I>.'s  Experiments<br>
+</H2>
+
+</center>
+
+<br>
+This folder contains intelligibility data obtained in Kjems <I>et al</I>.'s listening experiments. The objective of the listening tests was to measure speech intelligibility of normal-hearing listeners by applying ideal time-frequency segregation (ITFS) to noisy mixtures. The results and related description are given in the following paper:
+
+<p>
+<ul>Kjems U., Boldt J.B., Pedersen M.S., Lunner T., and Wang D.L. (2009):
+<a href="http://www.cse.ohio-state.edu/~dwang/papers/KBPLW.jasa09.pdf">
+Role of mask pattern in intelligibility of ideal binary-masked noisy speech</a>.
+<cite>Journal of the Acoustical Society of America</cite>, vol. 126, pp. 1415-1426.
+<br><br></ul>
+
+<HR>
+
+<H3> README 
+</H3> 
+<P> 
+
+
+The data can be downloaded in <a href="data.zip">one ZIP file</a> (about 2.18GB). They are reorganized from the original data provided by Kjems.
+
+<p>
+The sentences are from Dantale II corpus [1], which includes 160 sentences (16 tracks and 10 sentences in each track). In the listening test, 150 sentences (track1--track12, track14--track16) are selected. Each sentence is 5-word long and follows the same structure: name-verb-numeral-adjective-noun. Four types of noises are considered, including SSN, cafeteria noise, car interior noise and noise from a bottling hall. Two kinds of binary masks are employed, ideal binary mask (IBM) and target binary mask (TBM). Since TBM is equivalent to IBM under SSN, there are 7 categories in total: IBM/bottles, IBM/car, IBM/cafe, IBM/ssn, TBM/bottles, TBM/car and TBM/cafe. The noises are mixed with clean speech at 3 levels of SNRs: 20% speech reception threshold, 50% speech reception threshold and -60dB. To compute the binary mask, 8 different RCs (RC=LC-SNR) including the unprocessed situation are used. As a consequence, there are 7*8*3=168 conditions in total.
+
+<p>
+<ul><li>Files in the ZIP file </li></ul>
+</p>
+
+<p>
+-- Clean audio files, ITFS processed audio files and binary masks (IBM or TBM) are stored in "./ibm/bottles_20k", "./ibm/cafe_20k", "./ibm/ssn_20k", "./ibm/volvo_20k", "./tbm/bottles_20k", "./tbm/cafe_20k", and "./tbm/volvo_20k". Note: for one track, we choose target speech at RC=-100dB, SNR=50% SRT as the clean speech. Take track01 in "ibm/bottles" as an example, the clean speech is "target_track01_LCminusSNR-100.0_SNR-12.2.wav". More detailed information can be found in "./README.pdf".
+
+<p>
+-- "./intelligibility_data.mat" stores the human speech intelligibility scores (7*8*3), RC values (7*8) and SNR values (7*3).
+
+<p>
+-- In order to make it more clear, we apply the short-time objective intelligibility measure (STOI) [2] on the data. We also reproduce the Fig.7 in [2]. Matlab files are in folder "./experiment". We use the free Matlab implementation of <a href="http://msp.ewi.tudelft.nl/content/short-time-objective-intelligibility-measure"> STOI</a> provided online.
+
+<p>
+-- "./README.pdf" provides a more detailed explanation of the data and also presents the STOI results of IBM/bottles.
+
+<br><br>
+<p>
+[1] Wagener, K. C. (2003). Factors influencing sentence intelligibility in noise (Doctoral dissertation, Universität Oldenburg).
+
+<p>
+[2] Taal, C. H., Hendriks, R. C., Heusdens, R., and Jensen, J. (2011). An algorithm for intelligibility prediction of time–frequency weighted noisy speech. Audio, Speech, and Language Processing, IEEE Transactions on, 19(7), 2125-2136.
+<br>
+
+</BODY>
+
+</HTML>

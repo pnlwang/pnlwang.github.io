@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE>
+Intelligibility data
+</TITLE>
+</HEAD>
+
+<BODY>
+
+<center>
+<H2>
+<BR>
+Intelligibility Test Data from HI and NH Listeners<br>
+</H2>
+<H3>
+Compiled by <a href="http://www.cse.ohio-state.edu/~wangyuxu">Yuxuan Wang</a>
+</H3>
+</center>
+
+<br>
+This folder contains test data from hearing-impaired (HI) and normal-hearing (NH) listeners on 
+HINT utterances in two noises and algorithm-segregated noisy utterances. The test results are described 
+in the following paper:
+
+<p>
+<ul>Healy E.W., Yoho S.E., Wang Y., and Wang D.L. (2013):
+<a href="http://www.cse.ohio-state.edu/~dwang/papers/HYWW.jasa13.pdf">
+An algorithm to improve speech recognition in noise for hearing-impaired listeners</a>.
+<cite>Journal of the Acoustical Society of America</cite>, vol. 134, pp. 3029-3038.
+<br><br></ul>
+
+<HR>
+
+<H3> README 
+</H3> 
+<P> 
+
+
+The data can be downloaded in <a href="JASA13.zip">one ZIP file</a> (about 370 MB). The main idea behind the segregation algorithm is to estimate the ideal binary mask (IBM) using deep neural network classifiers.
+
+<p>
+Our experiment uses 260 Hearing In Noise Test (HINT) sentences, a speech shaped noise (SSN), 
+and a 8-talker babble noise as the training and test material. The HINT sentences are labeled as 6001.wav 
+through 6280.wav. The SSN and the babble noises are labeled as n5.wav and n6.wav, respectively. 
+The clean utterances and the noises can be found in folder "./data/clean_utterance" and "./data/noise". 
+All signals have a sampling frequency of 16 kHz. In our experiment, 100 sentences (6001~6070 and 6251~6280) 
+are used for classifier training, and 160 sentences (6071~6230) are used for testing.
+
+<p>
+-- To avoid mixing with a fixed noise segment, we cut each noise into 10 short segments. Each mixture is 
+created by first randomly permuting the noise segments to form a new version of the noise, 
+which is then mixed with a clean utterance at a specified SNR (-8, -5, -2, or 0 dB). 
+To enlarge the training set for improving generalization, each training utterance gets mixed 
+multiple times (6 in our experiments). The training mixtures and labels (IBMs) 
+can be found in "./data/training". The test mixtures and labels can be found in "./data/testing". 
+If a file has an extension of ".dat", it means that this file is written as an ASCII file, 
+which can be read by using MATLAB function "load(filename)".
+
+<p>
+-- We have included the separation results in "./results/objective_metrics.xlsx". Specifically, 
+we list classification accuracy as well as two objective intelligibility metrics, 
+the HIT minus the FA rate (HIT-FA) [1] and the Short-Time Intelligibility Measure (STOI) [2], 
+for each stimulus. The classification accuracy and HIT-FA are obtained by comparing an 
+estimated IBM with the IBM. The STOI results are obtained by using clean speech as 
+the reference signal. The "Mixture STOI" column denotes the STOI results of unprocessed mixtures, 
+whereas "Processed STOI" denotes those of processed by the algorithm.
+
+<p>
+-- The human intelligibility scores are listed in "./results/subject_scores.xlsx".
+
+
+<p>
+[1] G. Kim, Y. Lu, Y. Hu, and P. Loizou, "An algorithm that improves speech intelligibility in noise 
+for normal-hearing listeners," Journal of the Acoustical Society of America, pp. 1486-1494, 2009.
+
+<p>
+[2] C. Taal, R. Hendriks, R. Heusdens, and J. Jensen, "An algorithm for intelligibility prediction of 
+time-frequency weighted noisy speech," IEEE Trans. Audio, Speech, Lang. Process., pp. 2125-2136, 2011.
+<br>
+
+</BODY>
+
+</HTML>
+
+
