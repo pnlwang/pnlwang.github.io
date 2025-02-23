@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Matlab toolbox for DNN separation</title>
+</head>
+
+<body>
+<h1 align="center"><strong>Matlab toolbox for DNN-based speech separation</strong></h1>
+<p><br />
+This folder contains Matlab programs for a toolbox for supervised speech separation using deep neural networks (DNNs). This toolbox is composed by Jitong Chen, based on an earlier version written by Yuxuan Wang. The toolbox is further improved by Yuzhou Liu. 
+<br><br>
+
+For technical details about DNN-based speech separation see the following paper:</p>
+
+<blockquote>Wang Y., Narayanan A. and Wang D.L. (2014):
+<a href="http://www.cse.ohio-state.edu/~dwang/papers/WNW.taslp14.pdf">
+On training targets for supervised speech separation</a>.
+<cite>IEEE/ACM Transactions on Audio, Speech, and Language Processing</CITE>, vol. 22, pp. 1849-1858.
+</blockquote>
+
+The toolbox is provided by the OSU Perception and Neurodynamics Laboratory (PNL).<br><br>
+<a href="DNN_toolbox.zip">To download the toolbox, click here</a>
+</p>
+
+<hr />
+
+<p align="center"><b>Description of folders and files</b></p>
+<div style="line-height:160%;"></div>
+    <b>config/</b><br>
+    Lists of clean utterances for training and test.<br>
+    <div style="line-height:50%;"><br></div> 
+    <b>DATA/</b><br>
+    Mixtures, features, masks and separated speech are stored here.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>dnn/</b><br>
+    Code for DNN training and test, where dnn/main/ includes key functions for DNN training and test. dnn/pretraining/ includes code for unsupervised DNN pretraining.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>gen_mixture/</b><br>
+    Code for creating mixtures from noise and clean utterances.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>get_feat/</b><br>
+    Code for acoustic features and ideal mask calculation.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>premix_data/</b><br>
+    Sample data including clean speech and factory noise.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>load_config.m</b><br>
+    It configures feature type, noise type, training utterance list, test utterance list, mixture SNR, mask type, etc.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>RUN.m</b><br>
+    It loads configurations from load_config.m and runs a speech separation demo.<br><br>
+
+
+<hr />
+<p align="center"><b>DEMO</b></p>
+
+    <div style="line-height:50%;"><br></div>
+    (Tested on Matlab 2015b under Ubuntu 14.04, Red Hat 6.7, OS X 10.11.3 and Windows 7.)<br>
+    This demo uses 600 mixtures for training and 120 mixtures for testing.<br>
+    The mixtures are created by mixing clean utterances with factory noise at -2 dB.<br>
+    A 4-hidden-layer DNN with sigmoid hidden activation is used for mask estimation.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>To run this demo, simply execute RUN.m in matlab. This matlab script will execute the following steps:</b><br>
+    <div style="line-height:50%;"><br></div>
+    <b>I. Load configurations in load_config.m:</b><br>
+    <UL>
+    (a) 'train_list' and 'test_list' specify lists of clean utterances for training and test.<br>
+    (b) 'mix_db' specifies the SNR of training and test mixtures.<br>
+    (c) 'is_ratio_mask' specifies the mask type (0: binary mask, 1: ratio mask).<br>
+    (d) 'is_gen_mix', 'is_gen_feat' and 'is_dnn' indicate whether to perform different steps in speech separation.<br>
+    </UL>
+    <div style="line-height:50%;"><br></div>
+    <b>II. Create data folders for this demo.</b><br>
+    <div style="line-height:50%;"><br></div>
+    <b>III. Perform DNN based speech separation in three steps:</b><br>
+    <UL>
+    (a) Generate training and test mixtures.<br>
+    (b) Generate training and test features / masks.<br>
+    (c) DNN training and test. To use a different network architecture, you may change the configurations ('opts.*') in ./dnn/main/dnn_train.m:<br>
+    <UL>
+    (1) 'opts.unit_type_hidden' specifies the activation function for hidden layers ('sigm': sigmoid, 'relu': ReLU).<br>
+    (2) 'opts.isPretrain' indicates whether to perform pretraining (0: no pretraining, 1: pretraining). Note that pretraining is only supported for the sigmoid hidden activation function.<br>
+    (3) 'opts.hid_struct' specifies the numbers of hidden layers and hidden units.<br>
+    (4) 'opts.sgd_max_epoch' specifies the maximum number of training epochs.<br>
+    (5) 'opts.isDropout' specifies whether to use dropout regularization.<br>
+    </UL>
+    </UL>
+    <div style="line-height:50%;"><br></div>
+    <b>When DNN training and test are finished, you will find the following speech separation results:</b><br>
+    DATA/factory/dnn/WAVE/db-2/: mixture, clean speech and resynthesized speech.<br>
+    DATA/factory/dnn/STORE/db-2/EST_MASK/: estimated masks and ideal masks.<br>
+    DATA/factory/log_db-2.txt: log file for this demo.<br><br>
+
+<hr />
+<p align="center"><b>Acknowledgments</b></p>
+
+    <div style="line-height:160%;"></div>
+    We use rastamat (http://labrosa.ee.columbia.edu/matlab/rastamat/) to extract rastaplp and mfcc features.
+    We use STOI (http://ceestaal.nl/stoi.zip) as one of the objective speech intelligibility metrics.
+<br>
+</UL>
+<UL>
+
+    </td>
+  </tr>
+
+</table>
+
+</BODY>
+</HTML>

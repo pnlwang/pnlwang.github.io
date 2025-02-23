@@ -1,0 +1,195 @@
+
+<HTML>
+<HEAD>
+
+
+<TITLE>OSU Perception and Neurodynamics Lab Alumni</TITLE>
+<META NAME="DeLiang Wang" CONTENT="perception" "neurodynamics" "alumni">
+
+
+<STYLE>
+
+BODY {background:#A5DE94}
+
+A:LINK {color:#218429}
+A:VISITED {color:#218429}
+
+FONT {color:#218429; font-weight:bold}
+H2 {color:#218429; font-weight:bold; font-size:12pt}
+
+H1 {color:#FF6342;font-weight:bold;font-size:16pt; text-align:center}
+H3 {color:#FF6342;font-weight:bold; font-style:italic; font-size:14pt;
+    text-align:center}
+
+H4 {color:#D60000; letter-spacing:2pt; font-weight:bold; font-style:italic; font-size:12pt;
+    text-align:center}
+
+P {color:#186321; font-size:11pt}
+
+UL {list-style:disc; color:#186321; font-size:12pt; padding-left: 2%;}
+
+</STYLE>
+</HEAD>
+
+
+<BODY LEFTMARGIN=0 TOPMARGIN=10 MARGINWIDTH=0 MARGINHEIGHT=0>
+
+
+<table width="100%" border=0 cellspacing=0 cellpadding=5>
+  <tr> 
+    	<TD WIDTH=128>&nbsp</TD>
+
+    	<TD ALIGN="left"><A HREF="projects.html"><H2>Projects</H2></A></TD>
+
+	<TD ALIGN="left"><A HREF="software.html"><H2>Software</H2></A></TD>
+
+	<TD ALIGN="left"><A HREF="data.html"><H2>Data</H2></A></TD>
+
+	<TD ALIGN="left"><A HREF="demo.html"><H2>Sound demos</H2></A></TD>
+
+	<TD ALIGN="left"><A HREF="links.html"><H2>Useful links</H2></A></TD>
+
+	<TD ALIGN="left"><A HREF="contact.html"><H2>Contact</H2></A></TD>
+  </tr>
+
+  <tr>
+    <td WIDTH=128 ALIGN="center" VALIGN="top">
+
+	<FONT>
+<!--	<A HREF="blurp.html"><H4>Open GRA Position</H4></A>
+-->
+
+	Publications<BR>
+                        <A TARGET=_blank HREF="http://www.cse.ohio-state.edu/~dwang/pubs_year.html"><I>By Year</I><BR></A>
+                        <A TARGET=_blank HREF="http://www.cse.ohio-state.edu/~dwang/pubs_topic.html"><I>By Topic</I></A>
+
+	
+	<BR><BR>
+	Members<BR>
+
+                        <A TARGET='blank' HREF="http://www.cse.ohio-state.edu/~dwang/">
+				<I>Prof. D. Wang</I><BR></A>
+
+                        <A TARGET='blank' HREF="http://www.cse.ohio-state.edu/~chanchen">
+				<I>J. Chang</I><BR></A>
+
+                        <A TARGET='blank' HREF="http://www.cse.ohio-state.edu/~chenjit">
+				<I>J. Chen</I><BR></A>
+
+                        <A TARGET='blank' HREF="http://www.cse.ohio-state.edu/~delfarah">
+				<I>M. Delfarah</I><BR></A>
+
+                        <A TARGET='blank' HREF="http://www.cse.ohio-state.edu/~liuyuz">
+				<I>Y. Liu</I><BR></A>
+
+                        <A TARGET='blank' HREF="http://www.cse.ohio-state.edu/~wangzhon">
+				<I>Z. Wang</I><BR></A>
+
+                        <A TARGET='blank' HREF="http://www.cse.ohio-state.edu/~williado">
+				<I>D. Williamson</I><BR>
+
+                        <A TARGET='blank' HREF="https://sites.google.com/site/zhangxiaolei321/">
+				<I>X.-L. Zhang</I><BR></A>
+
+	<BR>
+	<A HREF="alumni.html">Alumni</A>
+
+	<BR><BR>
+	<A HREF="visitor.html">Visitors</A>
+
+	<BR><BR>
+	<A HREF="theses.html">Theses</A>
+
+	<BR><BR>
+	<A HREF="index.html">Home</A>
+	</FONT>
+    </TD>
+
+    <!--<td COLSPAN=6 VALIGN="top" BACKGROUND="http://www.cse.ohio-state.edu/~dwang/my_images/uback.gif">-->
+        <td COLSPAN=6 VALIGN="top" bgcolor="white">
+	<BR>
+
+<H1>DNN Toolbox Documentation</H1>
+<div style="line-height:150%;"><br></div>
+<UL>
+<LI><b>This folder contains Matlab programs for a toolbox for supervised speech separation using deep neural networks (DNNs). This toolbox is composed by Jitong Chen, based on an earlier version written by Yuxuan Wang. The toolbox is further improved by Yuzhou Liu.<br><div style="line-height:50%;"><br></div>
+The toolbox is provided by the OSU Perception and Neurodynamics Laboratory (PNL).</b>
+</LI>
+<div style="line-height:160%;"><br></div>
+<LI><b>Description of folders and files</b></LI>
+    <div style="line-height:50%;"><br></div>
+    <b>config/</b><br>
+    Lists of clean utterances for training and test.<br>
+    <div style="line-height:50%;"><br></div> 
+    <b>DATA/</b><br>
+    Mixtures, features, masks and separated speech are stored here.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>dnn/</b><br>
+    Code for DNN training and test, where dnn/main/ includes key functions for DNN training and test. dnn/pretraining/ includes code for unsupervised DNN pretraining.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>gen_mixture/</b><br>
+    Code for creating mixtures from noise and clean utterances.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>get_feat/</b>:<br>
+    Code for acoustic features and ideal mask calculation.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>premix_data/</b><br>
+    Sample data including clean speech and factory noise.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>load_config.m</b><br>
+    It configures feature type, noise type, training utterance list, test utterance list, mixture SNR, mask type, etc.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>RUN.m</b><br>
+    It loads configurations from load_config.m and runs a speech separation demo.<br>
+    <div style="line-height:160%;"><br></div>
+    <LI><b>DEMO</b></LI>
+    <div style="line-height:50%;"><br></div>
+    (Tested on Matlab 2015b under Ubuntu 14.04, Red Hat 6.7, OS X 10.11.3 and Windows 7.)<br>
+    This demo uses 600 mixtures for training and 120 mixtures for testing.<br>
+    The mixtures are created by mixing clean utterances with factory noise at -2 dB.<br>
+    A 4-hidden-layer DNN with sigmoid hidden activation is used for mask estimation.<br>
+    <div style="line-height:50%;"><br></div>
+    <b>To run this demo, simply execute RUN.m in matlab. This matlab script will execute the following steps:</b><br>
+    <div style="line-height:50%;"><br></div>
+    <b>I. Load configurations in load_config.m:</b><br>
+    <UL>
+    (a) 'train_list' and 'test_list' specify lists of clean utterances for training and test.<br>
+    (b) 'mix_db' specifies the SNR of training and test mixtures.<br>
+    (c) 'is_ratio_mask' specifies the mask type (0: binary mask, 1: ratio mask).<br>
+    (d) 'is_gen_mix', 'is_gen_feat' and 'is_dnn' indicate whether to perform different steps in speech separation.<br>
+    </UL>
+    <div style="line-height:50%;"><br></div>
+    <b>II. Create data folders for this demo.</b><br>
+    <div style="line-height:50%;"><br></div>
+    <b>III. Perform DNN based speech separation in three steps:</b><br>
+    <UL>
+    (a) Generate training and test mixtures.<br>
+    (b) Generate training and test features / masks.<br>
+    (c) DNN training and test. To use a different network architecture, you may change the configurations ('opts.*') in ./dnn/main/dnn_train.m:<br>
+    <UL>
+    (1) 'opts.unit_type_hidden' specifies the activation function for hidden layers ('sigm': sigmoid, 'relu': ReLU).<br>
+    (2) 'opts.isPretrain' indicates whether to perform pretraining (0: no pretraining, 1: pretraining). Note that pretraining is only supported for the sigmoid hidden activation function.<br>
+    (3) 'opts.hid_struct' specifies the numbers of hidden layers and hidden units.<br>
+    (4) 'opts.sgd_max_epoch' specifies the maximum number of training epochs.<br>
+    (5) 'opts.isDropout' specifies whether to use dropout regularization.<br>
+    </UL>
+    </UL>
+    <div style="line-height:50%;"><br></div>
+    <b>When DNN training and test are finished, you will find the following speech separation results:</b><br>
+    DATA/factory/dnn/WAVE/db-2/: mixture, clean speech and resynthesized speech.<br>
+    DATA/factory/dnn/STORE/db-2/EST_MASK/: estimated masks and ideal masks.<br>
+    DATA/factory/log_db-2.txt: log file for this demo.<br>
+    <div style="line-height:160%;"><br></div>
+    <LI><b>Acknowledgement</b></LI>
+    We use rastamat (http://labrosa.ee.columbia.edu/matlab/rastamat/) to extract rastaplp and mfcc features.
+    We use STOI (http://ceestaal.nl/stoi.zip) as one of the objective speech intelligibility metrics.
+</UL>
+<UL>
+
+    </td>
+  </tr>
+
+</table>
+
+</BODY>
+</HTML>
